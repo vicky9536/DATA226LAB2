@@ -1,0 +1,8 @@
+models:
+  - name: stock_price_analysis
+    description: "close price and rsi, moving averages, momentum for stock price"
+    columns:
+    - name: close
+      description: "closing price for each stock price record"
+      data_tests:
+      - not_null

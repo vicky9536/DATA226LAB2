@@ -1,0 +1,12 @@
+snapshots:
+  - name: stock_price_snapshots
+    target_schema: snapshot
+    config:
+      unique_key:
+        - symbol
+        - date
+      strategy: timestamp
+      updated_at: date
+      invalidate_hard_deletes: true
+    relation: source('stock_price_analysis')
+
